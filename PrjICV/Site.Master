@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PrjICV.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/app.css"/>
+    
+    <style>
+        #logo{
+            margin: 0;
+             position: absolute;
+             top: 8%;
+             left: 50%;
+             width:200px;
+             height:120px;
+            -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+             border-radius:10px;
+            
+        }
+        .head-body{
+            background-color:purple;
+        }
+        .content-body{
+            background-color:white;
+        }
+        #nav-bar-ul{
+            margin-left:-50px;
+            
+        }
+        #nav-bar-ul > li > a >button{
+            margin:-20px 0px 0px -15px;
+            background-color:#282669;
+            width:250px;
+            height:60px;
+            color:white;
+            border: none;
+            outline: none;
+            text-align:center;
+            
+        }
+        #nav-bar-ul > li > a{
+             background-color:#282669;
+             
+             
+         }
+        .op{
+            background-color:#282669;
+        }
+        .head-body{
+            background-color:#282669;
+        }
+         
+    </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg  head-body">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg"></a>
+
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="login.aspx" class="dropdown-item has-icon">
+                <i class="ion ion-android-person"></i> Login
+              </a>
+              <a href="register.aspx" class="dropdown-item has-icon">
+                <i class="ion ion-android-person"></i> Rigistration
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="ion ion-log-out"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar op">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand mt-5">   
+           <img alt="image" src="../dist/img/sample1.jpg" id="logo">
+          </div>
+          <ul class="sidebar-menu mt-5">
+            <li>
+              <ul id="nav-bar-ul">
+                <li><a href="Default.aspx"><button class="btn1" id="btn1" type="button" onclick="myFunction()">Page 1</button></a></li>
+                <li><a href="About.aspx"><asp:button class="btn1" id="btn2" type="btn2" onclick="myFunction()">About</asp:button></a></li>
+                <li><a href="Contact.aspx"><asp:button class="btn1" id="btn3" type="btn3" onclick="myFunction()">Contact</asp:button></a></li>
+                <li><a href="page1.aspx"><asp:button class="btn1" id="btn4" type="btn4" onclick="myFunction()">Page</asp:button></a></li>
+                <li><a href="#"><button class="btn1" id="btn5" type="btn5" onclick="myFunction()">Page 5</button></a></li>
+             </ul>
+            </li>
+           </ul>
+
+        </aside>
+      </div>
+     <div class="main-content content-body">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Dashboard</div>
+          </h1>
+             <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+    
+     </section>
+      </div>
+ 
+    </div>
+  </div>
+
+  <script src="../dist/modules/jquery.min.js"></script>
+  <script src="../dist/modules/popper.js"></script>
+  <script src="../dist/modules/tooltip.js"></script>
+  <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+  <script src="../dist/js/sa-functions.js"></script>
+  
+  <script src="../dist/modules/chart.min.js"></script>
+  <script src="../dist/modules/summernote/summernote-lite.js"></script>
+  <script src="../dist/js/scripts.js"></script>
+    <script>
+        var b1 = document.getElementById("btn1");
+        var b2 = document.getElementById("btn2");
+        var b3 = document.getElementById("btn3");
+        var b4 = document.getElementById("btn4");
+        var b5 = document.getElementById("btn5");
+        
+
+        b1.onclick = function () {
+            b1.style.background = "#d2a238";
+            b2.style.background = "";
+            b3.style.background = "";
+            b4.style.background = "";
+            b5.style.background = "";
+        }
+        b2.onclick = function () {
+            b1.style.background = "";
+            b2.style.background = "#d2a238";
+            b3.style.background = "";
+            b4.style.background = "";
+            b5.style.background = "";
+        }
+        b3.onclick = function () {
+            b1.style.background = "";
+            b2.style.background = "";
+            b3.style.background = "#d2a238";
+            b4.style.background = "";
+            b5.style.background = "";
+        }
+        b4.onclick = function () {
+            b1.style.background = "";
+            b2.style.background = "";
+            b3.style.background = "";
+            b4.style.background = "#d2a238";
+            b5.style.background = "";
+        }
+        b5.onclick = function () {
+            b1.style.background = "";
+            b2.style.background = "";
+            b3.style.background = "";
+            b4.style.background = "";
+            b5.style.background = "#d2a238";
+        }
+
+    </script>
+
+       
+
+    </form>
+</body>
+</html>
